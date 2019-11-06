@@ -33,8 +33,9 @@
     * Hide VCS Ignored Files: Checked
 
 ### Community Packages
-* script
-* vim-mode-plus
+* script: Adds code-running capability to Atom
+* vim-mode-plus: Adds vim keybindings
+* language-bazel: Adds syntax highlighting to Bazel files
 
 # Themes
 * UI Theme: One Dark
