@@ -153,7 +153,7 @@
 
 * `sudo systemctl restart fail2ban`
 
-# AppArmor?
+# AppArmor
 
 # References
 
