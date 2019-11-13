@@ -53,7 +53,7 @@ Things to install within Visual Studio Build Tools 2019:
             * Testing tools core features - Build Tools
 
 
-# Testing Installation
+# Testing Initial Installation
 
 Download the [Bazel Github repo](https://github.com/bazelbuild/bazel.git).
 
@@ -64,3 +64,9 @@ Navigate to the bazel directory.
 Build the example project with `bazel build //examples/cpp:hello-world`.
 
 Run the example project with `bazel-bin/examples/cpp/hello-world.exe`.
+
+# Adding GCC and Clang Support
+
+### GCC
+
+### Clang
