@@ -3,23 +3,22 @@
 Start by referring to the ["Installing Bazel on Windows"](
     https://docs.bazel.build/versions/master/windows.html) page.
 
-Goal is to use Bazel with Cygwin, not sure if that will be possible yet.
+Goal is to use Bazel with Cygwin, so do not install MSYS2 or resort to using
+    Command Prompt or PowerShell.
 
-Enable developer mode on Windows 10 by following [this article](
-    https://www.howtogeek.com/292914/WHAT-IS-DEVELOPER-MODE-IN-WINDOWS-10/).
+On Windows, go to "Add or Remove Programs" and look for "Microsoft Visual C++
+    Redistributable for Visual Studio 2015" or newer. If installed, skip
+    installation.
 
-Installation of "Visual C++ Redistributable for Visual Studio 2015" failed
-because of newer version (in this case, 2017) was already installed on my
-machine. Skip installation of the older version for now.
-
-Rename the Bazel binary to "bazel.exe".
-
-Skip the optional step 4 of configuring output directories.
+Download the Bazel binary from Github and rename the Bazel binary to
+    "bazel.exe".
 
 Put Bazel binary in /cygdrive/c/Program Files (x86)/Bazel/.
 
-Add Bazel binary to Cygwin path:
+Add Bazel binary to Cygwin path by adding the following to `.bashrc`:
     `PATH="$PATH:/cygdrive/c/Program\ Files\ \(x86\)/Bazel/"`.
+
+Skip the optional step 4 of configuring output directories.
 
 In step 5, installing optional compilers and language runtimes, do the
 following:
@@ -36,7 +35,9 @@ following:
 
 Now refer to the [Using Bazel on Windows](
     https://docs.bazel.build/versions/master/windows.html) page and proceed
-    from there.
+    from the "Build C++ with MSVC" section.
+
+Do not set any environment variables manually. Should not be necessary.
 
 Download and install [Visual C++ Build Tools](
     https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017).
@@ -70,3 +71,10 @@ Run the example project with `bazel-bin/examples/cpp/hello-world.exe`.
 ### GCC
 
 ### Clang
+
+# Enabling Runfiles
+
+If wanting to use the `--enable_runfiles` command on Windows, Windows developer mode must be enabled.
+
+Enable developer mode on Windows 10 by following [this article](
+    https://www.howtogeek.com/292914/WHAT-IS-DEVELOPER-MODE-IN-WINDOWS-10/).
