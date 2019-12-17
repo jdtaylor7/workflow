@@ -37,7 +37,6 @@
 # ufw (Uncomplicated Fire Wall)
 * Alternative to `iptables`
 * `sudo apt install ufw`
-* ...
 * `sudo ufw enable`
 * `sudo ufw limit OpenSSH`
 * Add any other applications (Jenkins here)
@@ -54,7 +53,7 @@
 # Enable email notifications
 
 ### Set up email server
-* *Leaving this, but not implementing for now because it's fairly complicated and not a priority. Therefore, these instructions are incomplete*
+* *Leaving this, but not implementing for now because it's not a priority. Therefore, these instructions are incomplete*
 * `sudo apt-get install postfix`
 * GUI options:
     * Mail configuration: `Internet Site`
@@ -73,7 +72,7 @@
     * `sudo systemctl restart postfix`
 * `sudo apt-get install mailutils`
 
-### Install `logwatch`
+# Logwatch
 * `sudo apt-get install logwatch`
 * Edit `/usr/shared/logwatch/default.conf/logwatch.conf`
     * `Output = file`
@@ -145,6 +144,7 @@
 * Create filter for Jenkins
     * Create and edit `/etc/fail2ban/filters.d/jenkins.conf`
     * *As of now, don't think this is actually possible since Jenkins's access log doesn't seem to record when login attempts fail. Might investigate more later.*
+    * Look at [this page](https://stackoverflow.com/questions/32561185/how-do-i-monitor-log-of-the-users-who-successfully-logged-into-my-jenkins-server)
 * Edit `/etc/fail2ban/jail.d/defaults-debian.conf`
     ```
     [sshd]
@@ -154,6 +154,7 @@
 * `sudo systemctl restart fail2ban`
 
 # AppArmor
+Have not looked into this yet, may in the future.
 
 # References
 

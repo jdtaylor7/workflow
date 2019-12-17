@@ -27,6 +27,8 @@
 # Packages
 
 ### Core Packages
+* autocomplete-plus
+    * Show Suggestions On Keystroke: Disabled
 * markdown-preview
 * tree-view
     * Hide Ignored Names: Checked
