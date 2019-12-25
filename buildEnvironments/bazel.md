@@ -1,7 +1,8 @@
 # Installing Bazel on Windows
 
 Start by referring to the ["Installing Bazel on Windows"](
-    https://docs.bazel.build/versions/master/windows.html) page.
+    https://docs.bazel.build/versions/master/windows.html) page alongside this
+page.
 
 Goal is to use Bazel with Cygwin, so do not install MSYS2 or resort to using
     Command Prompt or PowerShell.
@@ -16,7 +17,8 @@ Download the Bazel binary from Github and rename the Bazel binary to
 Put Bazel binary in /cygdrive/c/Program Files (x86)/Bazel/.
 
 Add Bazel binary to Cygwin path by adding the following to `.bashrc`:
-    `PATH="$PATH:/cygdrive/c/Program\ Files\ \(x86\)/Bazel/"`.
+    `PATH="$PATH:/cygdrive/c/Program Files (x86)/Bazel/"` (are backslashes
+necessary before spaces/parentheses?).
 
 Skip the optional step 4 of configuring output directories.
 
