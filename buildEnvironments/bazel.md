@@ -17,8 +17,8 @@ Download the Bazel binary from Github and rename the Bazel binary to
 Put Bazel binary in /cygdrive/c/Program Files (x86)/Bazel/.
 
 Add Bazel binary to Cygwin path by adding the following to `.bashrc`:
-    `PATH="$PATH:/cygdrive/c/Program Files (x86)/Bazel/"` (are backslashes
-necessary before spaces/parentheses?).
+    `PATH="$PATH:/cygdrive/c/Program Files (x86)/Bazel/"` (**are backslashes
+necessary before spaces/parentheses?)**.
 
 Skip the optional step 4 of configuring output directories.
 
