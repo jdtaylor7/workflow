@@ -20,7 +20,7 @@
         'alt-k': 'window:focus-pane-on-up'
         'alt-l': 'window:focus-pane-on-right'
 
-        'atom-workspace':
+    'atom-workspace':
         # Save with my vim binding.
         ', s': 'core:save'
 
