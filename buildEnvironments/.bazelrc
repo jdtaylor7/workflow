@@ -1,0 +1,9 @@
+# Be more verbose about failures and tests.
+build --verbose_failures
+test --test_output=all
+
+# Compile with C++17.
+build:linux --copt=-std=c++17
+
+# Add threading when using Linux.
+build:linux --linkopt=-lpthread

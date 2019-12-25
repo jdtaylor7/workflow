@@ -78,3 +78,11 @@ If wanting to use the `--enable_runfiles` command on Windows, Windows developer 
 
 Enable developer mode on Windows 10 by following [this article](
     https://www.howtogeek.com/292914/WHAT-IS-DEVELOPER-MODE-IN-WINDOWS-10/).
+
+# `.bazelrc`
+
+An example `.bazelrc` file is included in this directory.
+
+Note: In order to run lines such as `bazel:<name>...`, a config must be
+specified when running `bazel build...` or `bazel test...` on the command line
+with the `--config=<name>` flag. This is detailed in the Bazel docs [here](https://docs.bazel.build/versions/master/guide.html#bazelrc).
