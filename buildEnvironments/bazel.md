@@ -39,8 +39,6 @@ Now refer to the [Using Bazel on Windows](
     https://docs.bazel.build/versions/master/windows.html) page and proceed
     from the "Build C++ with MSVC" section.
 
-Do not set any environment variables manually. Should not be necessary.
-
 Download and install [Visual C++ Build Tools](
     https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017).
     Do not install all of Visual Studio.
@@ -55,8 +53,9 @@ Things to install within Visual Studio Build Tools 2019:
 
 Ensure an environment variable is set up to specify the location of the
 Microsoft Visual Studio Build Tools. The following line should be present in
-`.bazelrc`: `build:windows --action_env BAZEL_VS="/cygdrive/c/
-Program Files(x86)/Microsoft Visual Studio/2019/BuildTools"`
+`.bazelrc`:
+
+`build:windows --action_env BAZEL_VS="/cygdrive/c/Program Files(x86)/Microsoft Visual Studio/2019/BuildTools"`
 
 
 # Testing Initial Installation
