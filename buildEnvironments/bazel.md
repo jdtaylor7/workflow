@@ -48,9 +48,7 @@ Download and install [Visual C++ Build Tools](
 Things to install within Visual Studio Build Tools 2019:
 * Workloads
     * Windows
-        * C++ build tools
-    * Installation details
-        * C++ build Tools
+        * C++ build tools --> Installation details --> C++ build tools
             * MSVC v142 - VS 2019 C++ x64/x86 build Tools
             * Windows 10 SDK (newest version)
             * Testing tools core features - Build Tools
