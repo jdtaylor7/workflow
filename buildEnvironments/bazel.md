@@ -53,6 +53,11 @@ Things to install within Visual Studio Build Tools 2019:
             * Windows 10 SDK (newest version)
             * Testing tools core features - Build Tools
 
+Ensure an environment variable is set up to specify the location of the
+Microsoft Visual Studio Build Tools. The following line should be present in
+`.bazelrc`: `build:windows --action_env BAZEL_VS="/cygdrive/c/
+Program Files(x86)/Microsoft Visual Studio/2019/BuildTools"`
+
 
 # Testing Initial Installation
 

@@ -7,3 +7,6 @@ build:linux --copt=-std=c++17
 
 # Add threading when using Linux.
 build:linux --linkopt=-lpthread
+
+# Specify location of Microsoft Visual Studio on Windows platforms.
+build:windows --action_env BAZEL_VS="/cygdrive/c/Program Files(x86)/Microsoft Visual Studio/2019/BuildTools"
