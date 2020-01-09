@@ -14,11 +14,10 @@ On Windows, go to "Add or Remove Programs" and look for "Microsoft Visual C++
 Download the Bazel binary from Github and rename the Bazel binary to
     "bazel.exe".
 
-Put Bazel binary in /cygdrive/c/Program Files (x86)/Bazel/.
+Move Bazel binary to `/cygdrive/c/Program Files (x86)/Bazel/`.
 
 Add Bazel binary to Cygwin path by adding the following to `.bashrc`:
-    `PATH="$PATH:/cygdrive/c/Program Files (x86)/Bazel/"` (**are backslashes
-necessary before spaces/parentheses?)**.
+    `PATH="$PATH:/cygdrive/c/Program Files (x86)/Bazel/"`.
 
 Skip the optional step 4 of configuring output directories.
 
