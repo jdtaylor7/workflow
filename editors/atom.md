@@ -1,9 +1,9 @@
 # Core
-* Exclude VCS Ignored Paths: Checked
+* Exclude VCS Ignored Paths: Enabled
 * Project Home: Relevant path
 
 # Editor
-* Show Indent Guide: Checked
+* Show Indent Guide: Enabled
 * Tab Length: 4
 
 # Keybindings
@@ -31,13 +31,16 @@
     * Show Suggestions On Keystroke: Disabled
 * markdown-preview
 * tree-view
-    * Hide Ignored Names: Checked
-    * Hide VCS Ignored Files: Checked
+    * Hide Ignored Names: Enabled
+    * Hide VCS Ignored Files: Enabled
 
 ### Community Packages
 * script: Adds code-running capability to Atom
 * vim-mode-plus: Adds vim keybindings
 * language-bazel: Adds syntax highlighting to Bazel files
+* atom-ctags: Adds tag generation to allow jumping to declarations
+    * Automatically rebuild tags: Enabled
+    * After installation, restart Atom once or twice for it to start working
 
 # Themes
 * UI Theme: One Dark
