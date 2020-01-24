@@ -24,6 +24,11 @@
         # Save with my vim binding.
         ', s': 'core:save'
 
+    '.platform-win32 atom-text-editor':
+        # ctags goto and return from, respectively.
+        'f8': 'atom-ctags:go-to-declaration'
+        'alt-f8': 'atom-ctags:return-from-declaration'
+
 # Packages
 
 ### Core Packages
@@ -40,6 +45,7 @@
 * language-bazel: Adds syntax highlighting to Bazel files
 * atom-ctags: Adds tag generation to allow jumping to declarations
     * Automatically rebuild tags: Enabled
+    * Keybindings: Disabled
     * After installation, restart Atom once or twice for it to start working
 
 # Themes
