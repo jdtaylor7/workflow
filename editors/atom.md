@@ -29,6 +29,10 @@
         'f8': 'atom-ctags:go-to-declaration'
         'alt-f8': 'atom-ctags:return-from-declaration'
 
+    '.platform-win32,.platform-linux':
+        # Atom search and replace.
+        'f1': 'find-and-replace:show'
+
 # Packages
 
 ### Core Packages
