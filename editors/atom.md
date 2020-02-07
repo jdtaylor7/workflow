@@ -47,6 +47,7 @@
 * script: Adds code-running capability to Atom
 * vim-mode-plus: Adds vim keybindings
 * language-bazel: Adds syntax highlighting to Bazel files
+* language-cmake: Adds syntax highlighting to CMake files
 * atom-ctags: Adds tag generation to allow jumping to declarations
     * Automatically rebuild tags: Enabled
     * Keybindings: Disabled
