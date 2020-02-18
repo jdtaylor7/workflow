@@ -15,7 +15,7 @@ last directory which denotes the version of the toolchain.
 Add the binary location to Cygwin's PATH by adding the following to `.bashrc`:
 `PATH="$PATH:/cygdrive/c/Program Files (x86)/GNU Tools Arm Embedded/bin/"`.
 
-### Download ST-LINK tool.
+### Download ST-LINK tool
 
 Go to ST's [download page](https://www.st.com/en/development-tools/stsw-link004.html) to install ST-LINK.
 
