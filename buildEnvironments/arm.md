@@ -6,8 +6,8 @@ g++ compiler is not available for Cygwin.
 
 ### Download GNU ARM Embedded Toolchain
 
-Go to the relevant ARM Developer [download page](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) and install
-the most recent "gcc-arm-none-eabi-<date>-major-win32.exe" file.
+Go to the relevant ARM Developer [download page](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads)
+and install the most recent "gcc-arm-none-eabi-\<date\>-major-win32.exe" file.
 
 Run the installer. When specifying the destination folder, remove the
 last directory which denotes the version of the toolchain.
