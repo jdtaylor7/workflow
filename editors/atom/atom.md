@@ -52,6 +52,11 @@
     * Automatically rebuild tags: Enabled
     * Keybindings: Disabled
     * After installation, restart Atom once or twice for it to start working
+* LaTeX packages
+    * latex: Coordinates calling of LaTeX commands
+        * TeX path: $PATH
+    * language-latex: Syntax highlighting
+    * pdf-view: Provides in-editor viewing
 
 # Themes
 * UI Theme: One Dark
