@@ -1,37 +1,15 @@
 # Core
 * Exclude VCS Ignored Paths: Enabled
 * Project Home: Relevant path
+* Use Tree Sitter Parsers: Disabled (fixes syntax highlighting of TODO
+    statements in C++)
 
 # Editor
 * Show Indent Guide: Enabled
 * Tab Length: 4
 
 # Keybindings
-    'body':
-        # Split screen with tmux-like bindings.
-        'alt-shift-h': 'pane:split-left-and-copy-active-item'
-        'alt-shift-j': 'pane:split-down-and-copy-active-item'
-        'alt-shift-k': 'pane:split-up-and-copy-active-item'
-        'alt-shift-l': 'pane:split-right-and-copy-active-item'
-
-        # Focus panes with tmux-like bindings.
-        'alt-h': 'window:focus-pane-on-left'
-        'alt-j': 'window:focus-pane-on-down'
-        'alt-k': 'window:focus-pane-on-up'
-        'alt-l': 'window:focus-pane-on-right'
-
-    'atom-workspace':
-        # Save with my vim binding.
-        ', s': 'core:save'
-
-    '.platform-win32 atom-text-editor':
-        # ctags goto and return from, respectively.
-        'f8': 'atom-ctags:go-to-declaration'
-        'alt-f8': 'atom-ctags:return-from-declaration'
-
-    '.platform-win32,.platform-linux':
-        # Atom search and replace.
-        'f1': 'find-and-replace:show'
+Copy `keymap.cson` into `~/.atom`.
 
 # Packages
 
@@ -61,3 +39,6 @@
 # Themes
 * UI Theme: One Dark
 * Syntax Theme: Base16 Tomorrow Dark
+
+# Styles
+Copy `styles.less` into `~/.atom`.
