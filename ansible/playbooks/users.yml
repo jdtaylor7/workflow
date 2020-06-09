@@ -1,0 +1,14 @@
+---
+- name: Update user settings
+  hosts: localhost
+  connection: local
+  become: yes
+  vars_prompt:
+      - name: chosen_user
+        prompt: Enter your username
+        private: no
+  tasks:
+  - name: Add current user to wheel group
+    user:
+        name: "{{ chosen_user }}"
+        groups: "wheel"

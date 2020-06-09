@@ -1,0 +1,11 @@
+---
+- name:
+  hosts: localhost
+  connection: local
+  become: yes
+  vars_files:
+  - ../lists/atom_package_list.yml
+  tasks:
+  - name: Install Atom packages
+    shell: apm install "{{ item }}"
+    with_items: "{{ atom_packages }}"

@@ -1,0 +1,9 @@
+---
+atom_packages:
+- vim-mode-plus
+- language-bazel
+- language-cmake
+- latex
+- language-latex
+- pdf-view
+- pigments

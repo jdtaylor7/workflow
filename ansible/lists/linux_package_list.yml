@@ -1,0 +1,13 @@
+---
+pacman_packages:
+- git
+- trizen
+- vim
+- atom
+- ruby
+- refind
+- cmake
+- curl
+
+trizen_packages:
+- spotify

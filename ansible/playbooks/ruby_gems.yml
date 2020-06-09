@@ -1,0 +1,12 @@
+---
+- name:
+  hosts: localhost
+  connection: local
+  vars_files:
+  - ../lists/ruby_gem_list.yml
+  tasks:
+  - name: Install Ruby gems
+    gem:
+        name: "{{ item }}"
+        state: latest
+    with_items: "{{ ruby_gems }}"

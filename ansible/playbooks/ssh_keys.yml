@@ -1,0 +1,35 @@
+---
+- name: Generate SSH keys
+  hosts: localhost
+  connection: local
+  vars_files:
+  - ../data.txt
+  vars:
+      key_path: "/home/{{ host_username }}/.ssh/{{ ssh_key_filename }}"
+  vars_prompt:
+      - name: ssh_passphrase
+        prompt: Enter the passphrase for the ssh key
+        private: yes
+  tasks:
+  - name: Check if keys already exist
+    stat:
+        path: "{{ key_path }}"
+    register: stat_result
+  - name: Generate RSA keys  # use shell command to provide passphrase
+    shell: "ssh-keygen -t rsa -b 4096 -f {{ key_path }} -N {{ ssh_passphrase }} -C {{ host_email }}"
+    when: not stat_result.stat.exists
+
+  # Use personal access token rather than username/password.
+  - name: Upload SSH keys to Github
+    uri:
+        url: https://api.github.com/user/keys
+        user: "{{ github_username }}"
+        password: "{{ github_token }}"
+        method: POST
+        body_format: json
+        force_basic_auth: yes
+        status_code: 201
+        body:
+            title: "{{ github_ssh_key_name }}"
+            key: "{{ item }}"
+    with_file: "{{ key_path }}.pub"

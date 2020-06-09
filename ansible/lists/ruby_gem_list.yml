@@ -1,0 +1,4 @@
+---
+ruby_gems:
+- bundler
+- jekyll

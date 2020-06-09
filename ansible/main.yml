@@ -1,0 +1,7 @@
+---
+- import_playbook: playbooks/users.yml
+- import_playbook: playbooks/linux_packages.yml
+- import_playbook: playbooks/ruby_gems.yml
+- import_playbook: playbooks/atom_packages.yml
+# - import_playbook: shh_keys.yml
+# - import_playbook: personal_configs.yml

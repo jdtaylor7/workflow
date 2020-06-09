@@ -1,0 +1,26 @@
+---
+- name:
+  hosts: localhost
+  connection: local
+  become: yes
+  vars_files:
+  - ../lists/linux_package_list.yml
+  tasks:
+  - name: Upgrade pacman
+    pacman:
+        upgrade: yes
+  - name: Install Linux packages with pacman
+    pacman:
+        name: "{{ linux_packages }}"
+        state: latest
+
+- name:
+  hosts: localhost
+  connection: local
+  become: yes
+  vars_files:
+  - ../lists/linux_package_list.yml
+  tasks:
+  - name: Install Linux packages with trizen
+    shell: trizen -S "{{ item }}"
+    with_items: "{{ trizen_packages }}"

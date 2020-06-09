@@ -1,0 +1,45 @@
+---
+- name: Download personal repos
+  hosts: localhost
+  connection: local
+  tasks:
+  - pause:
+      prompt: "Add new ssh key to github account before continuing"
+  - name: Download workflow repo
+    git:
+        repo: git@github.com:jdtaylor7/workflow
+        dest: ~
+        accept_hostkey: yes
+
+- name: Install personal config files
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: Install bash config
+    copy:
+        src: ~/workflow/environment/linux/config/.bashrc
+        dest: ~
+  - name: Install bash aliases config
+    copy:
+        src: ~/workflow/environment/linux/config/.bash_aliases
+        dest: ~
+  - name: Install vim config
+    copy:
+        src: ~/workflow/environment/linux/config/.vimrc
+        dest: ~
+  - name: Install vim colors
+    copy:
+        src: ~/workflow/environment/linux/config/.vim/colors/
+        dest: ~/.vim/colors/  # Ends with slash - creates directory
+  - name: Install atom config files
+    copy:
+        src: ~/workflow/editors/atom/config/
+        dest: ~/.atom/
+  - name: Install git config
+    copy:
+        src: ~/workflow/source_control/git/config/.gitconfig
+        dest: ~
+  - name: Install sudo config
+    copy:
+        src: ~/workflow/misc/sudo/sudoers
+        dest: /etc
