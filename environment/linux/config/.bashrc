@@ -5,11 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-export TERM="xterm-256color"
-
 export EDITOR=vim
 
-PATH="$PATH:/cygdrive/c/Program Files (x86)/Bazel/"
+PATH="$PATH:/home/jordan/.gem/ruby/2.7.0/bin"
 
 # Ignore duplicate commands and commands starting with whitespace.
 HISTCONTROL=ignoreboth
@@ -42,4 +40,3 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
-
