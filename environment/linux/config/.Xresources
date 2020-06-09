@@ -1,0 +1,42 @@
+/* --- Xterm --- */
+6term*termName: xterm-256color
+
+!xterm*faceName: Serto Malankara
+xterm*faceName: Source Code Pro
+xterm*faceSize: 10
+
+xterm*loginshell: true
+
+xterm*foreground: rgb:b2/b2/b2
+xterm*background: rgb:08/08/08
+xterm*color0: rgb:28/28/28
+
+!copying and pasting
+xterm*selectToClipboard: true
+
+
+/* --- Rofi --- */
+#define r_bg	#53b4e9
+#define r_fg	#ff0000
+#define r_hlfg	#d65d0e
+
+! States: bg, fg, bgalt, hlbg, hlfg
+rofi.color-enabled: true
+rofi.color-window: argb:aa1793d1, argb:001793d1, argb:001793d1
+rofi.color-normal: argb:001793d1, #000000, argb:001793d1, argb:001793d1, #ffffff
+rofi.color-active: argb:001793d1, #0e5281, argb:001793d1, #1793d1, #fdf6e3
+rofi.color-urgent: #1793d1, #dc322f, #1793d1, #1793d1, #fdf6e3
+states: background, border
+
+rofi.separator-style: solid
+rofi.sidebar-mode: false
+rofi.bw: 1
+rofi.columns: 1
+rofi.padding: 16
+
+rofi.yoffset: 0
+!rofi.opacity: 50
+rofi.fake-transparency: false
+rofi.location: 0
+rofi.font: RobotoMono 12
+rofi.lines: 2
