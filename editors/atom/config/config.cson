@@ -1,0 +1,42 @@
+"*":
+  "autocomplete-plus":
+    enableAutoActivation: false
+  core:
+    packagesWithKeymapsDisabled: [
+      "latex"
+    ]
+    packagesWithSnippetsDisabled: []
+    projectHome: "C:\\Users\\Jordan\\Desktop\\code"
+    telemetryConsent: "limited"
+    themes: [
+      "one-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+    uriHandlerRegistration: "never"
+    useTreeSitterParsers: false
+  editor:
+    fontSize: 15
+    scrollPastEnd: true
+    showIndentGuide: true
+    tabLength: 4
+  "exception-reporting":
+    userId: "4e5d60eb-0f0c-4006-9b96-ae2fdf889161"
+  github: {}
+  latex:
+    buildOnSave: true
+    opener: "pdf-view"
+    texPath: "$PATH"
+  latextools:
+    viewer: "pdf-view"
+    win32:
+      distro: "texlive"
+  "pdf-view": {}
+  pigments:
+    markerType: "native-dot"
+  script:
+    stopOnRerun: true
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false
