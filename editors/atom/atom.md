@@ -35,7 +35,7 @@ Copy `keymap.cson` into `~/.atom`.
         * TeX path: $PATH
     * language-latex: Syntax highlighting
     * pdf-view: Provides in-editor viewing
-* pigments
+* pigments: Show RGB color codes in editor
     * Marker Type: native-dot
 
 # Themes
