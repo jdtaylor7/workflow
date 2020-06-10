@@ -8,7 +8,19 @@
         prompt: Enter your username
         private: no
   tasks:
+  - name: Ensure wheel group exists
+    group:
+        name: wheel
+        state: present
+  - name: Provide sudo access to the wheel group
+    lineinfile:
+        path: /etc/sudoers
+        state: present
+        regexp: "^# %wheel ALL=(ALL) ALL"
+        line: "%wheel ALL=(ALL) ALL"
+        validate: visudo -cf %s
   - name: Add current user to wheel group
     user:
         name: "{{ chosen_user }}"
-        groups: "wheel"
+        groups: wheel
+        append: yes

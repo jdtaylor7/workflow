@@ -15,8 +15,12 @@
     stat:
         path: "{{ key_path }}"
     register: stat_result
-  - name: Generate RSA keys  # use shell command to provide passphrase
-    shell: "ssh-keygen -t rsa -b 4096 -f {{ key_path }} -N {{ ssh_passphrase }} -C {{ host_email }}"
+  - name: Generate RSA keys
+    shell: >
+        "ssh-keygen -t rsa -b 4096
+        -f {{ key_path }}
+        -N {{ ssh_passphrase }}
+        -C {{ host_email }}"
     when: not stat_result.stat.exists
 
   # Use personal access token rather than username/password.
@@ -31,5 +35,4 @@
         status_code: 201
         body:
             title: "{{ github_ssh_key_name }}"
-            key: "{{ item }}"
-    with_file: "{{ key_path }}.pub"
+            key: "{{ lookup('file', '{{ key_path }}.pub') }}"

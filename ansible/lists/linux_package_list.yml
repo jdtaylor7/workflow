@@ -1,7 +1,7 @@
 ---
 pacman_packages:
 - git
-- trizen
+- pacaur
 - vim
 - atom
 - ruby
@@ -9,5 +9,5 @@ pacman_packages:
 - cmake
 - curl
 
-trizen_packages:
+aur_packages:
 - spotify

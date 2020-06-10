@@ -1,3 +1,2 @@
 .tags*
-ansible/data.txt
-ansible/TODO.txt
+ansible/data*
