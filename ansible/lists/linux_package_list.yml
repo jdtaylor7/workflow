@@ -5,6 +5,7 @@ pacman_packages:
 - vim
 - atom
 - ruby
+- nodejs
 - refind
 - cmake
 - curl

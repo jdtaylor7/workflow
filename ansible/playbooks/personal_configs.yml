@@ -3,32 +3,34 @@
   hosts: localhost
   connection: local
   become: yes
+  vars_files:
+  - ../data.txt
   tasks:
   - name: Install bash config
     copy:
-        src: ~/workflow/environment/linux/config/.bashrc
-        dest: ~
+        src: ../../environment/linux/config/.bashrc
+        dest: /home/{{ host_username }}
   - name: Install bash aliases config
     copy:
-        src: ~/workflow/environment/linux/config/.bash_aliases
-        dest: ~
+        src: ../../environment/linux/config/.bash_aliases
+        dest: /home/{{ host_username }}
   - name: Install vim config
     copy:
-        src: ~/workflow/environment/linux/config/.vimrc
-        dest: ~
+        src: ../../environment/linux/config/.vimrc
+        dest: /home/{{ host_username }}
   - name: Install vim colors
     copy:
-        src: ~/workflow/environment/linux/config/.vim/colors/
-        dest: ~/.vim/colors/  # Ends with slash - creates directory
+        src: ../../environment/linux/config/.vim/colors/
+        dest: /home/{{ host_username }}/.vim/colors/  # Ending slash, create dir
   - name: Install atom config files
     copy:
-        src: ~/workflow/editors/atom/config/
-        dest: ~/.atom/
+        src: ../../editors/atom/config/
+        dest: /home/{{ host_username }}/.atom/
   - name: Install git config
     copy:
-        src: ~/workflow/source_control/git/config/.gitconfig
-        dest: ~
+        src: ../../source_control/git/config/.gitconfig
+        dest: /home/{{ host_username }}
   - name: Install sudo config
     copy:
-        src: ~/workflow/misc/sudo/sudoers
-        dest: /etc
+        src: ../../misc/sudo/sudoers
+        dest: /etc/

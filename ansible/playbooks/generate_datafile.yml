@@ -3,7 +3,7 @@
   hosts: localhost
   connection: local
   vars:
-      data_file: "/home/jordan/code/workflow/ansible/data.txt"
+      data_file: ../data.txt
   vars_prompt:
     - name: h_user
       prompt: "Enter your Linux username"
