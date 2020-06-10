@@ -5,6 +5,7 @@
   become: yes
   vars_files:
   - ../lists/linux_package_list.yml
+  - ../data.txt
   tasks:
   - name: Upgrade pacman
     pacman:
@@ -14,21 +15,10 @@
         name: "{{ pacman_packages }}"
         state: latest
 
-- name: AUR
-  hosts: localhost
-  connection: local
-  become: yes
-  vars_files:
-  - ../lists/linux_package_list.yml
-  tasks:
-  - name: Install AUR packages
-    shell: pacaur -S "{{ item }}" --noconfirm --noedit
-    with_items: "{{ aur_packages }}"
-
 - name: Clear cache
   hosts: localhost
   connection: local
   become: yes
   tasks:
   - name: Clear Linux and AUR caches
-    shell: pacaur -Scc --noconfirm
+    shell: pacman -Scc --noconfirm

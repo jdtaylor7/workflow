@@ -15,5 +15,8 @@ automatically and with minimal confirmation prompts. Proceed with caution and
 please read through the playbooks yourself before using them.***
 
 1. Install Ansible: `pacman -S ansible`
-2. Navigate to this repo's Ansible directory: `cd ansible`
-3. Run the top-level Ansible playbook: `sudo ansible-playbook main.yml`
+2. Add localhost to Ansible host list: `echo "localhost" | sudo tee -a /etc/ansible/hosts`
+3. Navigate to this repo's Ansible directory: `cd ansible`
+4. Run the top-level Ansible playbook: `sudo ansible-playbook main.yml`
+
+AUR packages are not installed automatically as this would be a security vulnerability.

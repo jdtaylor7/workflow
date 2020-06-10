@@ -3,10 +3,8 @@
   hosts: localhost
   connection: local
   become: yes
-  vars_prompt:
-      - name: chosen_user
-        prompt: Enter your username
-        private: no
+  vars_files:
+  - ../data.txt
   tasks:
   - name: Ensure wheel group exists
     group:
@@ -21,6 +19,6 @@
         validate: visudo -cf %s
   - name: Add current user to wheel group
     user:
-        name: "{{ chosen_user }}"
+        name: "{{ host_username }}"
         groups: wheel
         append: yes
