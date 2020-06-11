@@ -10,7 +10,10 @@
       key_path: "/home/{{ host_username }}/.ssh/{{ ssh_key_filename }}"
   vars_prompt:
       - name: ssh_passphrase
-        prompt: Enter the passphrase for the ssh key
+        prompt: Enter the desired passphrase for the ssh key
+        private: yes
+      - name: github_token
+        prompt: Enter your Github access token
         private: yes
   tasks:
   - name: Create .ssh directory
@@ -22,11 +25,6 @@
         path: "{{ key_path }}"
     register: stat_result
   - name: Generate RSA keys
-#    shell: >
-#        "ssh-keygen -t rsa -b 4096
-#        -f {{ key_path }}
-#        -N {{ ssh_passphrase }}
-#        -C {{ host_email }}"
     shell: "ssh-keygen -t rsa -b 4096 -f {{ key_path }} -N {{ ssh_passphrase }} -C {{ host_email }}"
     when: not stat_result.stat.exists
 

@@ -14,9 +14,6 @@
     - name: g_user
       prompt: "Enter your Github username"
       private: no
-    - name: g_token
-      prompt: "Enter your Github token"
-      private: yes
     - name: s_file
       prompt: "Enter the name of the ssh key file"
       private: no
@@ -34,6 +31,5 @@
         content: "host_username: {{ h_user }}
                   \nhost_email: {{ h_email }}
                   \ngithub_username: {{ g_user }}
-                  \ngithub_token: {{ g_token }}
                   \nssh_key_filename: {{ s_file }}
                   \ngithub_ssh_key_name: {{ s_key }}\n"
