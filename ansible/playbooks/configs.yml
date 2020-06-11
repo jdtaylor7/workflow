@@ -3,6 +3,7 @@
   hosts: localhost
   connection: local
   become: yes
+  become_user: "{{ host_username }}"
   vars_files:
   - ../data.txt
   tasks:
@@ -30,7 +31,3 @@
     copy:
         src: ../../source_control/git/config/.gitconfig
         dest: /home/{{ host_username }}
-  - name: Install sudo config
-    copy:
-        src: ../../misc/sudo/sudoers
-        dest: /etc/

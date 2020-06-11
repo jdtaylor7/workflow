@@ -6,6 +6,11 @@
   vars_files:
   - ../data.txt
   tasks:
+  - name: Create ~/.ansible/tmp directory
+    file:
+        path: "/home/{{ host_username }}/.ansible/tmp/"
+        state: directory
+        owner: "{{ host_username }}"
   - name: Ensure wheel group exists
     group:
         name: wheel

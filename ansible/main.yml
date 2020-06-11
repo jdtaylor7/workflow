@@ -5,4 +5,4 @@
 - import_playbook: playbooks/ruby_gems.yml
 - import_playbook: playbooks/atom_packages.yml
 - import_playbook: playbooks/ssh_keys.yml
-- import_playbook: playbooks/personal_configs.yml
+- import_playbook: playbooks/configs.yml

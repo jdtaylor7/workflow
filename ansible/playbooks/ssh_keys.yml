@@ -2,6 +2,8 @@
 - name: Generate SSH keys
   hosts: localhost
   connection: local
+  become: yes
+  become_user: "{{ host_username }}"
   vars_files:
   - ../data.txt
   vars:
@@ -11,16 +13,21 @@
         prompt: Enter the passphrase for the ssh key
         private: yes
   tasks:
+  - name: Create .ssh directory
+    file:
+        path: /home/{{ host_username }}/.ssh/
+        state: directory
   - name: Check if keys already exist
     stat:
         path: "{{ key_path }}"
     register: stat_result
   - name: Generate RSA keys
-    shell: >
-        "ssh-keygen -t rsa -b 4096
-        -f {{ key_path }}
-        -N {{ ssh_passphrase }}
-        -C {{ host_email }}"
+#    shell: >
+#        "ssh-keygen -t rsa -b 4096
+#        -f {{ key_path }}
+#        -N {{ ssh_passphrase }}
+#        -C {{ host_email }}"
+    shell: "ssh-keygen -t rsa -b 4096 -f {{ key_path }} -N {{ ssh_passphrase }} -C {{ host_email }}"
     when: not stat_result.stat.exists
 
   # Use personal access token rather than username/password.
