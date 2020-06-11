@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Update pacman.
+pacman -Syu
+
 # Install Ansible.
 pacman -S ansible --noconfirm
 
