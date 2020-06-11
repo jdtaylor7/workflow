@@ -21,6 +21,11 @@
       prompt: "Enter the name of the ssh key"
       private: no
   tasks:
+  - name:
+    pause:
+      prompt: "A file named 'data.txt' has been created in this directory
+      storing the values just entered. If you would like to change these
+      values, edit the file. Press enter to continue"
   - name: Remove datafile if present
     file:
         path: "{{ data_file }}"

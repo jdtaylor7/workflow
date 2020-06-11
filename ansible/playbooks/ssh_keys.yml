@@ -27,7 +27,7 @@
   - name: Generate RSA keys
     shell: "ssh-keygen -t rsa -b 4096 -f {{ key_path }} -N {{ ssh_passphrase }} -C {{ host_email }}"
     when: not stat_result.stat.exists
-
+    
   # Use personal access token rather than username/password.
   - name: Upload SSH keys to Github
     uri:
