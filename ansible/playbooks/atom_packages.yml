@@ -3,8 +3,10 @@
   hosts: localhost
   connection: local
   become: yes
+  become_user: "{{ host_username }}"
   vars_files:
   - ../lists/atom_package_list.yml
+  - ../data.txt
   tasks:
   - name: Install Atom packages
     shell: apm install "{{ item }}"
