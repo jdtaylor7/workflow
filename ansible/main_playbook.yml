@@ -11,7 +11,7 @@
   tasks:
   - debug:
       msg: "You will need to create and use a Github access token for the next
-      step. Documentation for this is here:
+      step. It must have the scope 'admin:public_key'. Documentation for this is here:
       https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line"
 
 - import_playbook: playbooks/ssh_keys.yml
