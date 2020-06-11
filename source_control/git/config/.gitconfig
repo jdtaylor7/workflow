@@ -1,3 +1,7 @@
 [user]
 	email = jdtaylor7@gmail.com
 	name = Jordan Taylor
+[pull]
+	rebase = false
+[core]
+	editor = vim
