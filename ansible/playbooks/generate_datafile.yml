@@ -36,4 +36,4 @@
                   \ngithub_username: {{ g_user }}
                   \ngithub_token: {{ g_token }}
                   \nssh_key_filename: {{ s_file }}
-                  \ngithub_ssh_key_name: {{ s_key }}"
+                  \ngithub_ssh_key_name: {{ s_key }}\n"
