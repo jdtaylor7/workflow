@@ -26,7 +26,7 @@ vulnerability.
 The following settings are still executed manually These all assume Manjaro
 Linux as well, but should work very similarly for Arch Linux.
 * AUR package installation, as automatic installation is a security
-vulnerability. See the [package list](ansible/lists/aur_package_list.yaml).
+vulnerability. See the [package list](ansible/lists/aur_package_list.yml).
 * Boot loader setup. See
-[the relevant section](environment/linux/config/README.md#boot-loader) for
+[the relevant section](environment/linux/README.md#boot-loader) for
 details.
