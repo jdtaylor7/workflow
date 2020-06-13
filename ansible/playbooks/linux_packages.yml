@@ -4,7 +4,7 @@
   connection: local
   become: yes
   vars_files:
-  - ../lists/linux_package_list.yml
+  - ../lists/pacman_package_list.yml
   - ../data.txt
   tasks:
   - name: Upgrade pacman

@@ -3,7 +3,7 @@ This repo documents my coding environment setup, from text editor
 configurations to testing and CI. Automated installation of entire environment
 available via Ansible.
 
-### Installation
+### Automatic Installation
 All config settings here can be installed automatically with Ansible. The
 Ansible playbooks are set up only for Linux Manjaro at the moment, but they may
 for with Arch Linux as well. They could also be adapted to other Linux distros
@@ -18,4 +18,15 @@ please read through the playbooks yourself before using them.***
 2. Run the installation script (with `sudo` since packages are being
 installed): `sudo install_environment.sh`
 
-AUR packages are not installed automatically as this would be a security vulnerability.
+AUR packages are not installed automatically as this would be a security
+vulnerability.
+
+### Manual Installation
+
+The following settings are still executed manually These all assume Manjaro
+Linux as well, but should work very similarly for Arch Linux.
+* AUR package installation, as automatic installation is a security
+vulnerability. See the [package list](ansible/lists/aur_package_list.yaml).
+* Boot loader setup. See
+[the relevant section](environment/linux/config/README.md#boot-loader) for
+details.

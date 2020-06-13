@@ -12,6 +12,3 @@ pacman_packages:
 - cmake
 - curl
 - firefox
-
-aur_packages:
-- spotify
