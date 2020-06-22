@@ -13,3 +13,4 @@ pacman_packages:
 - curl
 - firefox
 - gtest
+- bazel
