@@ -12,3 +12,4 @@ pacman_packages:
 - cmake
 - curl
 - firefox
+- gtest
