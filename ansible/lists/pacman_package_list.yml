@@ -8,6 +8,7 @@ pacman_packages:
 - nodejs
 - refind
 - gcc
+- clang
 - make
 - cmake
 - curl
