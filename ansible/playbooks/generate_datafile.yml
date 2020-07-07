@@ -1,5 +1,5 @@
 ---
-- name: Create file of
+- name:
   hosts: localhost
   connection: local
   vars:

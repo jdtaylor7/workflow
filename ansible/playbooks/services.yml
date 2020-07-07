@@ -1,0 +1,11 @@
+---
+- name: Start and enable services
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: Start and enable redshift
+    systemd:
+        name: redshift
+        enabled: yes
+        scope: user
+        state: started
