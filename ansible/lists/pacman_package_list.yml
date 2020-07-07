@@ -1,17 +1,22 @@
 ---
 pacman_packages:
-- git
-- pacaur
-- vim
+- ansible
 - atom
-- ruby
-- nodejs
-- refind
-- gcc
+- bazel
 - clang
-- make
 - cmake
 - curl
+- discord
 - firefox
+- gcc
+- git
 - gtest
-- bazel
+- inkscape
+- make
+- nodejs
+- os-prober
+- pacaur
+- redshift
+- refind
+- ruby
+- vim
