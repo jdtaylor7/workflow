@@ -9,6 +9,7 @@ pacman_packages:
 - discord
 - firefox
 - gcc
+- gdb
 - git
 - gtest
 - inkscape
