@@ -3,6 +3,7 @@ atom_packages:
 - dbg-gdb
 - language-bazel
 - language-cmake
+- language-glsl
 - language-latex
 - latex
 - pdf-view
