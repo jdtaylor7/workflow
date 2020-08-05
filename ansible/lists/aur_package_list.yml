@@ -1,4 +1,5 @@
 ---
 aur_packages:
+- gimp-plugin-normalmap
 - lcov-git
 - spotify
