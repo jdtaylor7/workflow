@@ -9,6 +9,7 @@ pacman_packages:
 - curl
 - discord
 - docker
+- ffmpeg
 - firefox
 - gcc
 - gdb
@@ -18,6 +19,7 @@ pacman_packages:
 - inkscape
 - make
 - nodejs
+- obs-studio
 - os-prober
 - pacaur
 - redshift
