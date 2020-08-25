@@ -14,7 +14,7 @@ The following packages are used to do so:
 * Create a "window capture" source
 * Fit capture window to the size of the recorded window
     * Right click screen once recorded window is running and being previewed
-    * Preview Scaling --> Scale to Window
+    * Resize output (source size)
 * Set a keybinding to start/stop recording
 * Record screen
 
