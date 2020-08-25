@@ -1,6 +1,8 @@
 ---
 pacman_packages:
 - ansible
+- arduino
+- arduino-avr-core
 - atom
 - bazel
 - blender
