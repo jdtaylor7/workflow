@@ -19,6 +19,7 @@ pacman_packages:
 - git
 - gtest
 - inkscape
+- latex-most
 - make
 - nodejs
 - obs-studio
