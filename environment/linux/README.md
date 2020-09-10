@@ -28,6 +28,10 @@ EFI partition exists, it should be listed as a partition on one of the disks
 
 ##### Create EFI partition
 
+**Note: If using rEFInd, it should be sufficient to just run rEFInd's install**
+**process without manually changing EFI partitions. Check below at [Install**
+**rEFInd](install-refind)**
+
 Follow instructions [here](https://wiki.archlinux.org/index.php/EFI_system_partition#Create_the_partition).
 
 ##### Mount EFI partition
