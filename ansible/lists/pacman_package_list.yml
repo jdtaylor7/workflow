@@ -28,4 +28,5 @@ pacman_packages:
 - redshift
 - refind
 - ruby
+- tree
 - vim
