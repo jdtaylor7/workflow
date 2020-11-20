@@ -6,6 +6,7 @@ atom_packages:
 - language-docker
 - language-glsl
 - language-latex
+- language-linkerscript
 - latex
 - pdf-view
 - pigments
