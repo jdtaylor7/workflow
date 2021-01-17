@@ -16,5 +16,5 @@
 
 - import_playbook: playbooks/ssh_keys.yml
 - import_playbook: playbooks/configs.yml
-- import_playbook: playbooks/services.yml
+# - import_playbook: playbooks/services.yml
 - import_playbook: playbooks/scripts.yml
