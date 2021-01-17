@@ -14,17 +14,10 @@
     - name: g_user
       prompt: "Enter your Github username"
       private: no
-    - name: s_file
-      prompt: "Enter the name of the ssh key file"
-      private: no
     - name: s_key
       prompt: "Enter the name of the ssh key"
       private: no
   tasks:
-  - name:
-    pause:
-      prompt: "A file named 'data.txt' has been created in this directory
-      storing the values just entered. Press enter to continue"
   - name: Remove datafile if present
     file:
         path: "{{ data_file }}"
@@ -35,5 +28,4 @@
         content: "host_username: {{ h_user }}
                   \nhost_email: {{ h_email }}
                   \ngithub_username: {{ g_user }}
-                  \nssh_key_filename: {{ s_file }}
                   \ngithub_ssh_key_name: {{ s_key }}\n"

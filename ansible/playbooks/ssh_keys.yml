@@ -6,12 +6,7 @@
   become_user: "{{ host_username }}"
   vars_files:
   - ../data.txt
-  vars:
-      key_path: "/home/{{ host_username }}/.ssh/{{ ssh_key_filename }}"
   vars_prompt:
-      - name: ssh_passphrase
-        prompt: Enter the desired passphrase for the ssh key
-        private: yes
       - name: github_token
         prompt: Enter your Github access token
         private: yes
@@ -20,14 +15,11 @@
     file:
         path: /home/{{ host_username }}/.ssh/
         state: directory
-  - name: Check if keys already exist
-    stat:
-        path: "{{ key_path }}"
-    register: stat_result
   - name: Generate RSA keys
-    shell: "ssh-keygen -t rsa -b 4096 -f {{ key_path }} -N {{ ssh_passphrase }} -C {{ host_email }}"
-    when: not stat_result.stat.exists
-    
+    shell: "ssh-keygen -t ed25519 -a 100 -N '' -C {{ host_email }} -f /home/{{ host_username }}/.ssh/id_ed25519"
+    args:
+      creates: "/home/{{ host_username }}/.ssh/id_ed25519"
+
   # Use personal access token rather than username/password.
   - name: Upload SSH keys to Github
     uri:
@@ -40,4 +32,4 @@
         status_code: 201
         body:
             title: "{{ github_ssh_key_name }}"
-            key: "{{ lookup('file', '{{ key_path }}.pub') }}"
+            key: "{{ lookup('file', '/home/{{ host_username }}/.ssh/id_ed25519.pub') }}"
