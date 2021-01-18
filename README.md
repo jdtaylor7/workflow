@@ -15,10 +15,10 @@ automatically and with minimal confirmation prompts. Proceed with caution and
 please read through the playbooks yourself before using them.***
 
 1. [Install Manjaro Linux](https://manjaro.org/download/).
-2. Clone this repo.
+2. Clone this repo via https: `git clone https://github.com/jdtaylor7/workflow`
 3. Navigate to this repo's Ansible directory: `cd ansible`
 4. Run the installation script (with `sudo` since packages are being
-installed): `sudo install_environment.sh`
+installed): `sudo ./install_environment.sh`
 
 AUR packages are not installed automatically as they should be checked manually
 before installation.
