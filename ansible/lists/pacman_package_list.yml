@@ -20,7 +20,6 @@ pacman_packages:
 - git
 - gtest
 - inkscape
-- latex-most
 - make
 - nodejs
 - obs-studio
@@ -30,5 +29,6 @@ pacman_packages:
 - refind
 - ruby
 - rust-analyzer
+- texlive-most
 - tree
 - vim
