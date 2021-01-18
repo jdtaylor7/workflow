@@ -14,19 +14,20 @@ playbooks will install packages and other settings on your machine
 automatically and with minimal confirmation prompts. Proceed with caution and
 please read through the playbooks yourself before using them.***
 
-1. Navigate to this repo's Ansible directory: `cd ansible`
-2. Run the installation script (with `sudo` since packages are being
+1. [Install Manjaro Linux](https://manjaro.org/download/).
+2. Clone this repo.
+3. Navigate to this repo's Ansible directory: `cd ansible`
+4. Run the installation script (with `sudo` since packages are being
 installed): `sudo install_environment.sh`
 
-AUR packages are not installed automatically as this would be a security
-vulnerability.
+AUR packages are not installed automatically as they should be checked manually
+before installation.
 
 ### Manual Installation
 
-The following settings are still executed manually These all assume Manjaro
-Linux as well, but should work very similarly for Arch Linux.
-* AUR package installation, as automatic installation is a security
-vulnerability. See the [package list](ansible/lists/aur_package_list.yml).
+The following settings are still executed manually. These steps assume Manjaro
+Linux as well, but work similarly for Arch Linux.
+* AUR package installation. See the [package list](ansible/lists/aur_package_list.yml).
 * Boot loader setup. See
 [the relevant section](environment/linux/README.md#boot-loader) for
 details.
