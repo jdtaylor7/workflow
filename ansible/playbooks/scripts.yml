@@ -1,0 +1,11 @@
+---
+- name: Install scripts
+  hosts: localhost
+  connection: local
+  become: yes
+  become_user: "{{ host_username }}"
+  vars_files:
+  - ../data.txt
+  tasks:
+  - name: Download Rust install script
+    shell: curl --proto '=https' --tlsv1.2 https://sh.rustup.rs > "/home/{{ host_username }}/rust.sh"

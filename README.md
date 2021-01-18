@@ -25,9 +25,14 @@ before installation.
 
 ### Manual Installation
 
-The following settings are still executed manually. These steps assume Manjaro
+The following settings must be executed manually. These steps assume Manjaro
 Linux as well, but work similarly for Arch Linux.
 * AUR package installation. See the [package list](ansible/lists/aur_package_list.yml).
 * Boot loader setup. See
 [the relevant section](environment/linux/README.md#boot-loader) for
 details.
+* Rust installation.
+    * Navigate to your home directory: `cd ~`
+    * Check the Rust installation script: `less rust.sh`
+    * Add execution privileges to the script: `chmod +x rust.sh`
+    * Execute the script: `./rust.sh`
