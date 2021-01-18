@@ -8,6 +8,7 @@ pacman_packages:
 - blender
 - clang
 - cmake
+- code
 - curl
 - discord
 - docker
@@ -28,5 +29,6 @@ pacman_packages:
 - redshift
 - refind
 - ruby
+- rust-analyzer
 - tree
 - vim
