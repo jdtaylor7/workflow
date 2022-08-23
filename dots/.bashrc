@@ -57,5 +57,5 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # Start XFCE panel while I try to fix it...
-xfce4-panel
+xfce4-panel &>/dev/null
 
