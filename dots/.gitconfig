@@ -1,0 +1,9 @@
+[user]
+	email = ...
+	name = ...
+[pull]
+	rebase = false
+[core]
+	editor = vim
+[init]
+	defaultBranch = trunk
