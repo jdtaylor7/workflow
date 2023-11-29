@@ -23,13 +23,14 @@ pacman_packages:
 - make
 - nodejs
 - obs-studio
+- openssl-1.1
 - os-prober
 - pacaur
 - redshift
 - refind
 - ruby
 - rust-analyzer
-- texlive-most
+- texlive
 - the_silver_searcher
 - tmux
 - tree
