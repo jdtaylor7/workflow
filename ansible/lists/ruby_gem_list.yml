@@ -2,3 +2,4 @@
 ruby_gems:
 - bundler
 - jekyll
+- tmuxinator

@@ -30,6 +30,7 @@ pacman_packages:
 - ruby
 - rust-analyzer
 - texlive-most
+- the_silver_searcher
 - tmux
 - tree
 - vim
